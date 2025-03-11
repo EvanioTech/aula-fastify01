@@ -1,11 +1,18 @@
-import {knex as setupKnex} from 'knex';
 
-export const knexConfig = {
+import  {knex as setupKnex, Knex} from 'knex';
+import { env } from './env';
+
+
+if (!process.env.DATABASE_URL) {
+    throw new Error('DATABASE_URL must be set');
+}
+
+export const config: Knex.Config = {
     client: 'sqlite',
     connection: {
-        filename: './tmp.app.db',
+        filename: env.DATABASE_URL,
     },
     useNullAsDefault: true,
 }
 
-export const knex = setupKnex(knexConfig);
+export const knex = setupKnex(config);
