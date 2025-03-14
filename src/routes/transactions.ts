@@ -1,7 +1,6 @@
 import { FastifyInstance } from "fastify";
 import { knex } from "../database";
 import { z } from "zod";
-import { title } from "process";
 import { randomUUID } from "crypto";
 import { checkSessionIdExists } from "../middleware/check-session-id-exists";
 

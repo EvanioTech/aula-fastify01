@@ -7,7 +7,8 @@
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex migrate:make create-documents",
     "knex2": "node --no-warnings --import tsx ./node_modules/.bin/knex migrate:latest ",
-    "knex3": "node --no-warnings --import tsx ./node_modules/.bin/knex migrate:rollback "
+    "knex3": "node --no-warnings --import tsx ./node_modules/.bin/knex migrate:rollback ",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,8 @@
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^22.13.10",
     "eslint": "^8.57.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
